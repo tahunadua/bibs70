@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Paskah 2025</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      overflow: hidden;
+    }
+
+    body {
+      background-color: #fff3e0;
+    }
+
+    .background-moving {
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 200%;
+      height: 100%;
+      background-image: url('https://assets.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/2023/03/26/FotoJet-2023-03-26T045750478-1341705129.jpg');
+      background-repeat: repeat-x;
+      background-size: cover;
+      animation: slideBg 20s linear infinite;
+      z-index: 0;
+      filter: brightness(0.6);
+    }
+
+    @keyframes slideBg {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(50%); }
+    }
+
+    .container, .reflection {
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    h1, h2, h3, p {
+      margin: 0.5em 0;
+    }
+
+    .blinking {
+      animation: blink 1.5s infinite;
+    }
+
+    @keyframes blink {
+      0% { opacity: 1; }
+      50% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    h1 {
+      font-size: 6vw;
+    }
+
+    h2 {
+      font-size: 6vw;
+    }
+
+    h3 {
+      font-size: 5vw;
+    }
+
+    .message h2 {
+      font-size: 6vw;
+      color: #FFD700;
+    }
+
+    .message h3 {
+      font-size: 8vw;
+      color: #ffffff;
+      font-weight: bold;
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 12px 24px;
+      font-size: 5vw;
+      background-color: #FFD700;
+      color: #4A148C;
+      border: none;
+      border-radius: 14px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #fff176;
+    }
+
+    .reflection {
+      display: none;
+      background: linear-gradient(to bottom right, #fff3e0, #ffffff);
+      color: #4A148C;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .reflection h2 {
+      font-size: 6vw;
+    }
+
+    .reflection p {
+      font-size: 4.5vw;
+      line-height: 1.5;
+      text-align: justify;
+      margin-bottom: 1em;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="background-moving"></div>
+
+  <div class="container" id="awal">
+    <h1>Keluarga</h1>
+    <h2>Montolalu Hamel</h2>
+    <h3>mengucapkan</h3>
+    <div class="message">
+      <h2 class="blinking">Selamat Merayakan Hari Kemenangan</h2>
+      <h3>HARI RAYA PASKAH</h3>
+    </div>
+    <button onclick="tampilkanPesan()">Klik</button>
+  </div>
+
+  <div class="reflection" id="pesan">
+    <h2>“Kebangkitan-Nya adalah Harapan Kita”</h2>
+    <p><strong>Selamat merayakan Paskah 2025!</strong><br>
+      Di tengah dunia yang terus berubah dan penuh tantangan, Paskah kembali mengingatkan kita akan kasih yang tak tergoyahkan dan harapan yang tak pernah padam.</p>
+    <p><strong>Yesus telah bangkit!</strong> Kemenangan-Nya atas maut memberi kita semangat baru untuk bangkit dari setiap keterpurukan, mengampuni dengan kasih, dan berjalan dengan iman.</p>
+    <p>Semoga terang Paskah senantiasa menyinari langkah kita, meneguhkan hati yang lemah, dan membangkitkan semangat untuk hidup dalam kasih, pengharapan, dan damai sejahtera.</p>
+    <p><strong>Kristus telah bangkit!<br> Ia sungguh telah bangkit!</strong></p>
+  </div>
+
+  <script>
+    function tampilkanPesan() {
+      document.getElementById("awal").style.display = "none";
+      document.getElementById("pesan").style.display = "flex";
+    }
+  </script>
+
+</body>
+</html>
